@@ -1,0 +1,15 @@
+# SO
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Tooling local (o site é estático e não tem build, mas por precaução)
+node_modules/
+npm-debug.log*

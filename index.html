@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Panréus — Padaria e Cafeteria | Cachoeirinha/RS</title>
+  <meta name="description" content="Há mais de 30 anos assando pão em Cachoeirinha/RS. Pães artesanais, confeitaria, tortas, sanduíches, café e buffet de café da manhã. Rua Monteiro Lobato, 407 — Parque da Matriz. Seg a sáb, 07h às 20h.">
+  <meta name="theme-color" content="#3E4A36">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Panréus — Padaria e Cafeteria">
+  <meta property="og:description" content="Mais de 30 anos de história. Nova fase, mesma essência. Pães artesanais, confeitaria, café e buffet de café da manhã em Cachoeirinha/RS.">
+  <!-- TODO(domínio): confirmar o domínio de produção com o cliente e substituir
+       SEU-DOMINIO.com.br nas duas metas abaixo — og:image relativo é ignorado pelos scrapers -->
+  <meta property="og:image" content="https://SEU-DOMINIO.com.br/assets/img/hero-fachada.jpg">
+  <meta property="og:url" content="https://SEU-DOMINIO.com.br/">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Google Fonts: Fraunces (display) + Alegreya Sans (corpo) + Sacramento (script/neon) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=Sacramento&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Marca cedo que há JS: o CSS usa html.js para nascer com o neon apagado.
+       Sem JS (ou sem os CDNs — ver guarda no main.js), o letreiro fica aceso desde o 1º paint. -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container site-header__bar">
+      <a class="site-header__logo" href="#hero">Panreus<span class="visually-hidden"> — voltar ao início</span></a>
+
+      <nav class="site-header__nav" aria-label="Navegação principal">
+        <ul class="site-header__links">
+          <li><a href="#historia">História</a></li>
+          <li><a href="#vitrine">Produtos</a></li>
+          <li><a href="#buffet">Buffet</a></li>
+          <li><a href="#localizacao">Onde estamos</a></li>
+        </ul>
+        <a class="btn btn--header" href="https://wa.me/555121605528" target="_blank" rel="noopener">WhatsApp</a>
+      </nav>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-mobile">
+        <span class="visually-hidden">Menu</span>
+        <span class="menu-toggle__linha" aria-hidden="true"></span>
+        <span class="menu-toggle__linha" aria-hidden="true"></span>
+        <span class="menu-toggle__linha" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Painel do menu mobile — irmão do header (não filho) de propósito: o backdrop-filter
+       do header rolado viraria containing block e prenderia este position:fixed dentro dele -->
+  <div id="menu-mobile" class="menu-mobile" data-lenis-prevent hidden>
+    <nav class="menu-mobile__nav" aria-label="Menu">
+      <ul class="menu-mobile__links">
+        <li><a href="#historia">História</a></li>
+        <li><a href="#vitrine">Produtos</a></li>
+        <li><a href="#buffet">Buffet</a></li>
+        <li><a href="#localizacao">Onde estamos</a></li>
+      </ul>
+      <div class="cta-par menu-mobile__ctas">
+        <a class="btn btn--primary" href="https://wa.me/555121605528" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+        <a class="btn btn--ghost" href="https://www.ifood.com.br/delivery/cachoeirinha-rs/pan-reus-parque-da-matriz" target="_blank" rel="noopener">Pedir no iFood</a>
+      </div>
+      <p class="menu-mobile__info">Seg a sáb · 07h às 20h · sem fechar ao meio-dia</p>
+    </nav>
+  </div>
+
+  <main id="conteudo">
+
+    <!-- 1. HERO — o letreiro neon da parede, ligando -->
+    <section id="hero" class="hero section--dark" aria-label="Panréus — padaria e cafeteria">
+      <!-- Fachada como atmosfera: terço direito no desktop, camada velada no mobile -->
+      <figure class="img-ph hero__foto" data-label="hero-fachada.jpg" aria-hidden="true">
+        <img src="assets/img/hero-fachada.jpg" alt="">
+      </figure>
+
+      <div class="container hero__conteudo">
+        <p class="eyebrow" data-hero-entrada>Padaria e Cafeteria · Cachoeirinha/RS</p>
+
+        <!-- Duas camadas do mesmo texto: o "tubo apagado" (sempre visível, é o texto
+             acessível via aria-label) e a camada acesa com glow, que o GSAP liga -->
+        <h1 class="hero__letreiro" aria-label="Panréus">
+          <span class="hero__letreiro-tubo" aria-hidden="true">Panreus</span>
+          <span class="hero__letreiro-neon script-neon" aria-hidden="true">Panreus</span>
+        </h1>
+
+        <p class="hero__tagline" data-hero-entrada>Há mais de 30 anos assando o melhor da sua manhã.</p>
+
+        <div class="cta-par" data-hero-entrada>
+          <a class="btn btn--primary" href="https://wa.me/555121605528" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+          <a class="btn btn--ghost" href="https://www.ifood.com.br/delivery/cachoeirinha-rs/pan-reus-parque-da-matriz" target="_blank" rel="noopener">Pedir no iFood</a>
+        </div>
+
+        <p class="hero__horario" data-hero-entrada>Seg a sáb · 07h às 20h · sem fechar ao meio-dia</p>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <span class="hero__scroll-linha"></span>
+      </div>
+    </section>
+
+    <!-- 2. MARQUEE — fita decorativa de produtos (o conteúdo real está na Vitrine).
+         Duas cópias do mesmo grupo: o GSAP desloca o trilho até -50% e recomeça.
+         O &nbsp; final iguala o vão da emenda ao espaço interno dos separadores.
+         Botão de pausa fora da subárvore aria-hidden (WCAG 2.2.2). -->
+    <section id="produtos-marquee" class="marquee">
+      <div class="marquee__fita" aria-hidden="true">
+        <div class="marquee__trilho" data-marquee-trilho>
+          <span class="marquee__grupo">PÃES ARTESANAIS · TORTAS · CUCAS · CAFÉ · SANDUÍCHES · BUFFET DE CAFÉ DA MANHÃ · FATIAS ·&nbsp;</span>
+          <span class="marquee__grupo">PÃES ARTESANAIS · TORTAS · CUCAS · CAFÉ · SANDUÍCHES · BUFFET DE CAFÉ DA MANHÃ · FATIAS ·&nbsp;</span>
+        </div>
+      </div>
+      <button class="marquee__pausa" type="button" aria-pressed="false" data-marquee-pausa>Pausar animação</button>
+    </section>
+
+    <!-- Nota a11y: enquanto as seções estão vazias, usamos aria-label. Ao construir cada
+         seção, dar ao <h2> o id "X-titulo" e trocar por aria-labelledby="X-titulo". -->
+
+    <!-- 3. HISTÓRIA — a foto antiga em P&B vira a Panréus de hoje conforme o scroll -->
+    <section id="historia" class="section historia" aria-labelledby="historia-titulo">
+      <div class="container historia__grid">
+
+        <!-- Moldura sticky (desktop): P&B na base, colorida revelada por cima via scrub -->
+        <div class="historia__coluna-foto">
+          <figure class="historia__moldura">
+            <div class="historia__fotos">
+              <figure class="img-ph historia__foto historia__foto--pb" data-label="historia-pb.jpg — foto antiga (P&B)">
+                <img src="assets/img/historia-pb.jpg" alt="A padaria Panréus nos primeiros anos, em foto antiga preto e branco">
+              </figure>
+              <figure class="img-ph historia__foto historia__foto--cor" data-label="interior-cafe.jpg — salão atual (colorida)">
+                <img src="assets/img/interior-cafe.jpg" alt="O salão da Panréus hoje, com madeira clara, plantas pendentes e luz quente">
+              </figure>
+            </div>
+            <figcaption class="historia__legenda" data-historia-legenda>
+              <span class="historia__legenda-antes" aria-hidden="true">Onde tudo começou</span>
+              <span class="historia__legenda-depois">A Panréus hoje</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- Texto: o respiro vertical entre os blocos dá curso ao scrub da foto -->
+        <div class="historia__texto">
+          <p class="eyebrow" data-reveal>Nossa história</p>
+
+          <h2 id="historia-titulo" data-reveal>Mais de 30 anos tirando o melhor do forno.</h2>
+
+          <!-- TODO(fato): o ano exato de fundação não consta no briefing — mantido "mais de 30 anos" -->
+          <p data-reveal>A Panréus foi construída de madrugadas, muito trabalho e fé. Enquanto Cachoeirinha ainda dormia, o forno já estava aceso — e foi assim, fornada após fornada, por mais de trinta anos.</p>
+
+          <blockquote class="historia__quote" data-reveal>
+            <p>O sonho de oferecer mais do que pão: um lugar onde as pessoas se sintam em casa.</p>
+          </blockquote>
+
+          <p data-reveal>Em julho de 2026, esse sonho ganhou um espaço novo: mais conforto, mais carinho em cada detalhe — e a mesma essência de sempre. Nova fase, mesma essência.</p>
+
+          <p class="historia__assinatura" data-reveal>— Família Panréus</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. VITRINE — produtos por categoria (vitrine-doces.jpg / torta-morango.jpg / sanduiche.jpg) -->
+    <section id="vitrine" class="section" aria-label="Vitrine de produtos">
+    </section>
+
+    <!-- 5. BUFFET — buffet de café da manhã, destaque (buffet-cafe.jpg) -->
+    <section id="buffet" class="section section--dark" aria-label="Buffet de café da manhã">
+    </section>
+
+    <!-- 6. DEPOIMENTOS — depoimentos reais de clientes -->
+    <section id="depoimentos" class="section" aria-label="Depoimentos de clientes">
+    </section>
+
+    <!-- 7. LOCALIZAÇÃO — endereço, horários e mapa -->
+    <section id="localizacao" class="section" aria-label="Localização e horários">
+    </section>
+
+  </main>
+
+  <!-- 8. FOOTER — contatos: WhatsApp (51) 2160-5528, iFood, Instagram @panreus_ -->
+  <footer id="footer" class="section--dark">
+  </footer>
+
+  <!-- GSAP 3 + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+  <!-- Lenis (smooth scroll) -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js"></script>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
